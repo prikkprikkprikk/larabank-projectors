@@ -10,8 +10,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -20,7 +21,7 @@
     <div class="max-w-lg mx-auto">
         <header class="mx-4 my-4 flex items-center justify-between">
             <h1 class="logotype pr-1">
-                💸 LARABANK
+                <span class="te ">💸</span> MiSoBank
             </h1>
             @auth
                 <ul class="flex">
@@ -30,7 +31,7 @@
                             class="text-grey-dark"
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();"
                         >
-                            Log out
+                            Logg ut
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

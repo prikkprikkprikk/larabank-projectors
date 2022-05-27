@@ -1,6 +1,7 @@
 .logotype {
-    font-family: 'Bungee';
-    background: -webkit-linear-gradient(#51d88a, #1f9d55);
+    font-family: 'Lexend';
+    @apply text-white font-black;
+    /* background: -webkit-linear-gradient(#51d88a, #1f9d55);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 }

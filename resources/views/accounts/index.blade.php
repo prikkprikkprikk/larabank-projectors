@@ -10,7 +10,7 @@
                             {{ strtoupper($account->name) }}
                         </h2>
                         <strong class="text-3xl {{ $account->balance >= 0 ? 'text-green' : 'text-red' }}">
-                            € {{ $account->balance }}
+                            {{ $account->balance }} kr
                         </strong>
                     </div>
                     <div class="w-1/3">
@@ -22,23 +22,23 @@
                                     type="number"
                                     value=""
                                     name="amount"
-                                    placeholder="Amount"
+                                    placeholder="Beløp"
                                     class="rounded-sm px-2 h-10 w-full mb-2"
                                     autocomplete="off"
                                 >
                                 <button
                                     type="submit"
                                     name="addMoney"
-                                    class="px-3 h-10 rounded-sm bg-green-gradient text-white font-medium flex-1 mr-1"
+                                    class="px-3 h-10 rounded-sm bg-green-gradient text-white font-medium flex-1 mr-1 white-space-nowrap"
                                 >
-                                    Deposit
+                                    Sett inn
                                 </button>
                                 <button
                                     type="submit"
                                     name="subtractMoney"
-                                    class="px-3 h-10 rounded-sm bg-red-gradient text-white font-medium flex-1 ml-1"
+                                    class="px-3 h-10 rounded-sm bg-red-gradient text-white font-medium flex-1 ml-1 white-space-nowrap"
                                 >
-                                    Withdraw
+                                    Ta ut
                                 </button>
                             </div>
                         </form>
@@ -48,7 +48,7 @@
         </ul>
     @else
         <div class="py-8 mb-2 flex items-center justify-center rounded-sm bg-grey-darkest border-grey-darker text-grey-light">
-            Nothing here yet!
+            Tomt her!
         </div>
     @endif
     @include('accounts.partials.create-form')

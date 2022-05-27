@@ -2,10 +2,10 @@
 
 namespace App\Projectors;
 
-use App\Account;
+use App\Models\Account;
 use App\Events\MoneyAdded;
 use App\Events\MoneySubtracted;
-use App\TransactionCount;
+use App\Models\TransactionCount;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
 /*

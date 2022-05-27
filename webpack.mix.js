@@ -1,5 +1,20 @@
 const mix = require('laravel-mix');
-const tailwindcss = require('tailwindcss');
+
+/**
+ * BrowserSync configuration
+ */
+
+ mix.browserSync({
+    proxy: 'https://misobank.test',
+    files: [
+        "app/**/*",
+        "config/**/*",
+        "resources/**/*",
+        "public/**/*",
+    ],
+    notify: false,
+})
+
 
 /*
  |--------------------------------------------------------------------------
@@ -13,7 +28,6 @@ const tailwindcss = require('tailwindcss');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-.postCss('resources/css/app.css', 'public/css', [
-    require('postcss-easy-import')(),
-    tailwindcss('./tailwind.js'),
+  .postCss('resources/css/tailwind.css', 'public/css', [
+    require('tailwindcss'),
 ]);

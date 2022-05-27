@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Account;
+use App\Models\Account;
 use App\Events\AccountDeleted;
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 

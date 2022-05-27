@@ -2,7 +2,7 @@
 
 namespace App\Reactors;
 
-use App\Account;
+use App\Models\Account;
 use App\Events\MoneyAdded;
 use App\Mail\BigAmountAddedMail;
 use Illuminate\Support\Facades\Mail;
